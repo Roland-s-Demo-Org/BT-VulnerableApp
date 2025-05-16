@@ -127,6 +127,15 @@ tasks.register('GenerateSampleVulnerability'){
 dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
 
+    constraints {
+        implementation 'org.springframework:spring-webmvc:5.2.20'
+        implementation 'org.springframework:spring-web:5.2.20'
+        implementation 'org.springframework:spring-core:5.2.20'
+        implementation 'org.springframework:spring-beans:5.2.20'
+        implementation 'org.springframework:spring-expression:5.2.20'
+        implementation 'org.springframework:spring-context:5.2.20'
+    }
+
     // https://mvnrepository.com/artifact/org.mockito/mockito-core
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.5.13'
 
