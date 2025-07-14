@@ -125,6 +125,10 @@ tasks.register('GenerateSampleVulnerability'){
 }
 
 dependencies {
+    constraints {
+        implementation 'org.yaml:snakeyaml:1.26.0'
+    }
+    
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
 
     // https://mvnrepository.com/artifact/org.mockito/mockito-core
