@@ -127,6 +127,14 @@ tasks.register('GenerateSampleVulnerability'){
 dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
 
+    // Version constraints for Spring transitive dependencies
+    implementation group: 'org.springframework', name: 'spring-core', version: '5.3.39'
+    implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.3.39'
+    implementation group: 'org.springframework', name: 'spring-web', version: '5.3.39'
+    implementation group: 'org.springframework', name: 'spring-beans', version: '5.3.39'
+    implementation group: 'org.springframework', name: 'spring-expression', version: '5.3.39'
+    implementation group: 'org.springframework', name: 'spring-context', version: '5.3.39'
+
     // https://mvnrepository.com/artifact/org.mockito/mockito-core
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.5.13'
 
