@@ -36,6 +36,9 @@ repositories {
     mavenCentral()
     gradlePluginPortal()
     mavenLocal()
+    maven {
+        url 'https://maven.aikido.io/d31fc8ec94e6da07d307d63f10e418931d6'
+    }
 }
 
 sonarqube {
@@ -126,6 +129,9 @@ tasks.register('GenerateSampleVulnerability'){
 
 dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+
+    // Version constraint for transitive dependency
+    implementation group: 'org.yaml', name: 'snakeyaml', version: '1.26.tuxcare.1'
 
     // https://mvnrepository.com/artifact/org.mockito/mockito-core
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.5.13'
