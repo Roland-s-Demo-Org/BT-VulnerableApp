@@ -36,6 +36,9 @@ repositories {
     mavenCentral()
     gradlePluginPortal()
     mavenLocal()
+    maven {
+        url 'https://maven.aikido.io/d31fc8ec94e6da07d307d63f10e418931d6'
+    }
 }
 
 sonarqube {
@@ -158,6 +161,9 @@ dependencies {
     implementation group: 'io.github.sasanlabs', name: 'facade-schema', version: '1.0.1'
 
     implementation group: 'commons-fileupload', name: 'commons-fileupload', version: '1.5'
+    
+    // Version constraint for transitive dependency
+    implementation group: 'org.yaml', name: 'snakeyaml', version: '1.26.tuxcare.1'
 }
 
 test {
