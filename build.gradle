@@ -127,6 +127,9 @@ tasks.register('GenerateSampleVulnerability'){
 dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
 
+    // Version constraint for transitive dependency to fix security vulnerability
+    implementation group: 'org.yaml', name: 'snakeyaml', version: '2.0'
+
     // https://mvnrepository.com/artifact/org.mockito/mockito-core
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.5.13'
 
