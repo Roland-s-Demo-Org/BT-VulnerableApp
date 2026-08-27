@@ -21,6 +21,17 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
+dependencyManagement {
+    dependencies {
+        dependency 'org.springframework:spring-core:5.3.39-tuxcare.17'
+        dependency 'org.springframework:spring-webmvc:5.3.39-tuxcare.17'
+        dependency 'org.springframework:spring-web:5.3.39-tuxcare.17'
+        dependency 'org.springframework:spring-beans:5.3.39-tuxcare.17'
+        dependency 'org.springframework:spring-expression:5.3.39-tuxcare.17'
+        dependency 'org.springframework:spring-context:5.3.39-tuxcare.17'
+    }
+}
+
 bootJar {
     baseName = 'VulnerableApp'
     version =  '1.0.0'
@@ -36,6 +47,9 @@ repositories {
     mavenCentral()
     gradlePluginPortal()
     mavenLocal()
+    maven {
+        url "https://maven.aikido.io/d31fc8ec94e6da07d30"
+    }
 }
 
 sonarqube {
