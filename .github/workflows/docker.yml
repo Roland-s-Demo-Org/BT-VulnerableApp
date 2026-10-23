@@ -23,16 +23,16 @@ jobs:
           fetch-depth: 0
       -
         name: Setup GitVersion action
-        uses: gittools/actions/gitversion/setup@v0.9.7
+        uses: gittools/actions/gitversion/setup@62f943a7b7e1981bb87a8314f304524657551786 # v0.9.7
         with:
           versionSpec: '5.x'
       -
         name: Execute GitVersion action
         id: gitversion
-        uses: gittools/actions/gitversion/execute@v0.9.7
+        uses: gittools/actions/gitversion/execute@62f943a7b7e1981bb87a8314f304524657551786 # v0.9.7
       -
         name: Create tag for GitHub
-        uses: tvdias/github-tagger@v0.0.1
+        uses: tvdias/github-tagger@a570476cc87352c1655c606b29590df6014535e0 # v0.0.1
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           tag: '${{ steps.gitversion.outputs.semver }}'
